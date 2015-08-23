@@ -1,0 +1,43 @@
+.top-nav{
+	height:30px;
+	background-color: #777777;
+}
+.banner{
+	height:350px;
+	background-color: #eeeeee;
+	line-height: 350px;
+	border-bottom:1px solid #ededed;
+}
+.banner-content{
+	position: relative;
+	height:100%;
+	background-color: #ffffff;
+}
+.switch-bt{
+	position: absolute;
+	top:0;
+	height: 350px;
+	width: 50px;
+	background-color: #888888;
+	opacity: 0.4;
+}
+.switch-bt:hover{
+	opacity:0.2;
+	cursor: pointer;
+}
+.pre{
+	left: 0;
+}
+.next{
+	right:0;
+}
+.code-box{
+	padding: 1px 0;
+	position:relative;
+	background-color: #dddddd;
+}
+.code{
+	display: block;
+	margin:10px;
+	color:#666666;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js继承的六种方法</title>
+	<link rel="stylesheet" href="./styles/base/base.css">
+	<link rel="stylesheet" href="./styles/common/common.css">
+	<link rel="stylesheet" href="./styles/jquery-mobile/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" href="./styles/main.css">
+	<script data-main="scripts/main.js" src="./scripts/require.js"></script>
+</head>
+<body>
+	<div class="top-nav"></div>
+	<div class="banner"> 
+		<div class="banner-content text-center w">
+			<span class="f50">js对象的几种创建方式</span>
+			<div class="switch-bt pre"></div> 
+			<div class="switch-bt next"></div>
+		</div>
+	</div>
+	<div class="w"> 
+		<h1>工厂模式</h1>
+		<div class="code-box"> 
+			<code class="code" id="code-section" contenteditable>
+				function createperson(name,age,job){<br>
+					var o = new Object();<br>
+					o.name = name;<br>
+					o.age = age;<br>
+					o.job = job;<br>
+					return o;<br>
+				}<br>
+				var nicholas = createperson('nicholas',25,'software engineer');
+			</code>
+		</div>
+		
+		<h1>构造函数模式</h1>
+		<div class="code-box"> 
+			<code class="code" id="code-section" contenteditable>
+				function Person(name,age,job){<br>
+					this.name = name;<br>
+					this.age = age;<br>
+					this.job = job;<br>
+				}<br>
+				var nicholas = new Person('nicholas',25,'software engineer');
+			</code>
+		</div>
+		<h1>原型模式</h1>
+		<div class="code-box"> 
+			<code class="code" id="code-section" contenteditable>
+				function Person(name,age,job){<br>
+				}<br>
+				<br>PersonPrototype.prototype.name= 'nicholas';
+				<br>PersonPrototype.prototype.age = 25;
+				<br>PersonPrototype.prototype.job = 'software engineer';
+				<br>PersonPrototype.prototype.sayName = function(){
+				<br>	console.log(this.name);
+				<br>}
+				<br>nicholas = new PersonPrototype();
+				<br>var nicholas = new Person('nicholas',25,'software engineer');
+			</code>
+		</div>
+	</div>
+</body>
+</html>
